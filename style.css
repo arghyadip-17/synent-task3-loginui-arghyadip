@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #011b1f;
+  --card: #141414;
+  --card-border: #4c5b3d;
+  --text: #f0f0f0;
+  --muted: #666;
+  --label: #aaa;
+  --input-bg: #0a0a0a;
+  --input-border: #222;
+  --input-hover: #333;
+  --button-dark: #f0f0f0;
+  --button-dark-hover: #dddddd;
+  --button-text: #111;
+  --soft-line: #222;
+  --footer: #555;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  background: radial-gradient(circle at top, #04333b 0%, var(--bg) 45%, #001215 100%);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: rgba(20, 20, 20, 0.96);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  padding: 2.8rem 2.2rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--label);
+  margin-bottom: 8px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+.label-row label {
+  margin-bottom: 0;
+}
+
+.forgot {
+  font-size: 12.5px;
+  color: #7f7f7f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot:hover {
+  color: #f0f0f0;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #f5f5f5;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #4a4a4a;
+}
+
+input[type="email"]:hover,
+input[type="password"]:hover {
+  border-color: var(--input-hover);
+  background: #111;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #5f8cff;
+  background: #111;
+  box-shadow: 0 0 0 4px rgba(95, 140, 255, 0.16);
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin-top: 1.3rem;
+  background: var(--button-dark);
+  color: var(--button-text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--button-dark-hover);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 1.35rem 0;
+  color: #8a8a8a;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--soft-line);
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 48px;
+  background: #141414;
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #d0d0d0;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-google:hover {
+  background: #1a1a1a;
+  border-color: #333;
+  transform: translateY(-1px);
+}
+
+.btn-google:active {
+  transform: scale(0.98);
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: 13px;
+  color: var(--footer);
+}
+
+.footer-note a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 440px) {
+  body {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 2rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

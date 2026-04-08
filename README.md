@@ -24,7 +24,7 @@ Designed with a dark theme, smooth interactions, and real-world UI/UX practices.
 ## 📂 Project Structure
 
 ```
-login-ui/
+synent-task3-loginui-arghyadip/
 │
 ├── index.html
 └── style.css
